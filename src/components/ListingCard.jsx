@@ -10,12 +10,13 @@ export default function ListingCard({ listing }) {
   const [liked, setLiked] = useState(false)
   return (
     <article className="card">
-      <div className="card-media" style={{ background: cover(listing.hue) }}>
-        <Link to={`/alojamiento/${listing.id}`} className="card-link" aria-label={listing.title} />
+      <div className="card-media" style={{ backgroundImage: `url("${listing.image}")` }}>
+        <Link to={`/producto/${listing.id}`} className="card-link" aria-label={listing.title} />
+        <span className="condition-tag">{listing.condition}</span>
         <button
           className={`like ${liked ? 'on' : ''}`}
           onClick={() => setLiked(!liked)}
-          aria-label="Guardar en favoritos"
+          aria-label={liked ? 'Quitar de favoritos' : 'Guardar en favoritos'}
           aria-pressed={liked}
         >
           <Icon name="heart" size={24} filled={liked} />
@@ -23,11 +24,11 @@ export default function ListingCard({ listing }) {
       </div>
       <div className="card-body">
         <div className="card-row">
-          <strong>{listing.location}</strong>
+          <strong>{listing.title}</strong>
           <span className="rating"><Icon name="star" size={14} filled />{listing.rating}</span>
         </div>
-        <p className="muted">{listing.title}</p>
-        <p><strong>{listing.price} €</strong> <span className="muted">noche</span></p>
+        <p className="muted">{listing.location} · {listing.seller}</p>
+        <p className="price-line"><strong>{listing.price} €</strong> <span className="shipping-note">{listing.shipping}</span></p>
       </div>
     </article>
   )

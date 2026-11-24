@@ -14,6 +14,23 @@ export default function Home({ query }) {
 
   return (
     <main>
+      <section className="hero">
+        <div className="hero-copy">
+          <span className="eyebrow"><span className="eyebrow-dot" /> EL MERCADO GAMER, A TU MANERA</span>
+          <h1>Tu próxima partida<br />empieza <span>aquí.</span></h1>
+          <p>Encuentra ese juego que te falta o dale una segunda vida a tu setup.</p>
+          <a href="#productos" className="hero-cta">Explorar productos <span>↘</span></a>
+        </div>
+        <div className="hero-art" aria-hidden="true">
+          <div className="hero-orbit orbit-one" />
+          <div className="hero-orbit orbit-two" />
+          <div className="hero-product"><Icon name="gamepad" size={116} /></div>
+          <span className="hero-spark spark-one">✳</span>
+          <span className="hero-spark spark-two">✦</span>
+          <span className="hero-float">GG<br /><small>GOOD GEAR</small></span>
+        </div>
+      </section>
+
       <nav className="categories" aria-label="Categorías">
         {categories.map((c) => (
           <button
@@ -27,12 +44,20 @@ export default function Home({ query }) {
         ))}
       </nav>
 
+      <section className="section-heading" id="productos">
+        <div>
+          <p className="eyebrow">SEGUNDA MANO, PRIMERA ELECCIÓN</p>
+          <h2>Descubre tu próximo <span>upgrade</span></h2>
+        </div>
+        <span className="result-count">{visible.length} productos</span>
+      </section>
+
       {visible.length ? (
         <section className="grid">
           {visible.map((l) => <ListingCard key={l.id} listing={l} />)}
         </section>
       ) : (
-        <p className="empty">No hay alojamientos que coincidan con tu búsqueda.</p>
+        <p className="empty">No hay productos que coincidan con tu búsqueda. Prueba con otra categoría o palabra.</p>
       )}
     </main>
   )

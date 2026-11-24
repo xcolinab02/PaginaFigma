@@ -11,10 +11,11 @@ export default function App() {
       <Header query={query} onQuery={setQuery} />
       <Routes>
         <Route path="/" element={<Home query={query} />} />
+        <Route path="/producto/:id" element={<Listing />} />
         <Route path="/alojamiento/:id" element={<Listing />} />
         <Route path="*" element={<Home query={query} />} />
       </Routes>
-      <footer className="footer">© Stayly · Plantilla editable</footer>
+      <footer className="footer">© PixelMarket · Compra, vende y vuelve a jugar.</footer>
     </>
   )
 }

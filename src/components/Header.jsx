@@ -5,14 +5,14 @@ export default function Header({ query, onQuery }) {
   return (
     <header className="header">
       <Link to="/" className="brand">
-        <Icon name="logo" size={30} filled />
-        <span>stayly</span>
+        <Icon name="gamepad" size={28} />
+        <span>pixel<span className="brand-accent">market</span></span>
       </Link>
 
       <form className="searchbar" onSubmit={(e) => e.preventDefault()}>
         <input
-          aria-label="Buscar destino"
-          placeholder="Busca un destino o alojamiento"
+          aria-label="Buscar productos"
+          placeholder="Busca juegos, consolas y más..."
           value={query}
           onChange={(e) => onQuery(e.target.value)}
         />
@@ -20,8 +20,8 @@ export default function Header({ query, onQuery }) {
       </form>
 
       <div className="header-actions">
-        <button className="ghost">Pon tu casa en Stayly</button>
-        <button className="ghost round" aria-label="Idioma"><Icon name="globe" size={18} /></button>
+        <button className="ghost sell-button"><Icon name="plus" size={17} /> Vender</button>
+        <button className="ghost round" aria-label="Favoritos"><Icon name="heart" size={19} /></button>
         <button className="profile" aria-label="Menú de usuario">
           <Icon name="menu" size={18} />
           <Icon name="user" size={26} />

@@ -1,21 +1,19 @@
-// Datos de ejemplo. Sustitúyelos por los tuyos.
-// `hue` genera el degradado de la imagen; cambia `image` por una URL para usar fotos.
 export const categories = [
-  { id: 'all', label: 'Todos', icon: 'home' },
-  { id: 'beach', label: 'Playa', icon: 'beach' },
-  { id: 'mountain', label: 'Montaña', icon: 'mountain' },
-  { id: 'pool', label: 'Piscina', icon: 'pool' },
-  { id: 'city', label: 'Ciudad', icon: 'city' },
-  { id: 'cabin', label: 'Cabañas', icon: 'cabin' },
+  { id: 'all', label: 'Todo', icon: 'grid' },
+  { id: 'consoles', label: 'Consolas', icon: 'console' },
+  { id: 'games', label: 'Videojuegos', icon: 'game' },
+  { id: 'controllers', label: 'Mandos', icon: 'controller' },
+  { id: 'accessories', label: 'Accesorios', icon: 'headphones' },
+  { id: 'pc', label: 'Gaming PC', icon: 'monitor' },
 ]
 
 export const listings = [
-  { id: 1, title: 'Casa frente al mar', location: 'Cádiz, España', category: 'beach', price: 140, rating: 4.9, reviews: 212, hue: 200, guests: 6, beds: 3, baths: 2, description: 'Despierta con el sonido de las olas. Terraza amplia, cocina equipada y acceso directo a la playa.' },
-  { id: 2, title: 'Cabaña entre pinos', location: 'Navacerrada, España', category: 'cabin', price: 95, rating: 4.8, reviews: 134, hue: 150, guests: 4, beds: 2, baths: 1, description: 'Un refugio de madera con chimenea, rodeado de bosque y senderos para caminar.' },
-  { id: 3, title: 'Ático con vistas', location: 'Barcelona, España', category: 'city', price: 180, rating: 4.7, reviews: 98, hue: 20, guests: 3, beds: 1, baths: 1, description: 'Ático luminoso en el centro, con terraza privada y todo a pocos minutos a pie.' },
-  { id: 4, title: 'Villa con piscina', location: 'Marbella, España', category: 'pool', price: 260, rating: 4.95, reviews: 301, hue: 175, guests: 8, beds: 4, baths: 3, description: 'Villa de diseño con piscina infinita, jardín mediterráneo y zona de barbacoa.' },
-  { id: 5, title: 'Chalet alpino', location: 'Sierra Nevada, España', category: 'mountain', price: 120, rating: 4.6, reviews: 76, hue: 230, guests: 5, beds: 3, baths: 2, description: 'A pie de pista, con sauna y salón acogedor para después de esquiar.' },
-  { id: 6, title: 'Estudio junto a la playa', location: 'Valencia, España', category: 'beach', price: 85, rating: 4.5, reviews: 59, hue: 190, guests: 2, beds: 1, baths: 1, description: 'Estudio sencillo y luminoso a dos minutos del paseo marítimo.' },
-  { id: 7, title: 'Loft industrial', location: 'Madrid, España', category: 'city', price: 110, rating: 4.7, reviews: 143, hue: 330, guests: 4, beds: 2, baths: 1, description: 'Loft de techos altos en el corazón de la ciudad, rodeado de cafés y galerías.' },
-  { id: 8, title: 'Casa rural con piscina', location: 'Ronda, España', category: 'pool', price: 130, rating: 4.8, reviews: 87, hue: 45, guests: 6, beds: 3, baths: 2, description: 'Casa de piedra con piscina y vistas al valle, ideal para desconectar.' },
+  { id: 1, title: 'PlayStation 5 Slim + 2 mandos', location: 'Madrid', category: 'consoles', price: 429, rating: 4.9, reviews: 32, condition: 'Como nuevo', seller: 'Alex R.', shipping: 'Envío gratis', image: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=1000&q=85', description: 'PS5 Slim en perfecto estado, con muy poco uso. Incluye dos mandos DualSense, todos los cables y su caja original.', specs: ['1 TB SSD', 'Edición digital', '2 mandos incluidos'] },
+  { id: 2, title: 'Nintendo Switch OLED', location: 'Valencia', category: 'consoles', price: 245, rating: 5.0, reviews: 18, condition: 'Muy buen estado', seller: 'Marta G.', shipping: 'Envío desde 4 €', image: 'https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?auto=format&fit=crop&w=1000&q=85', description: 'Nintendo Switch OLED con pantalla de 7 pulgadas. Funciona perfectamente y se entrega con Joy-Con, dock y cargador originales.', specs: ['Pantalla OLED 7”', '64 GB', 'Dock y cargador originales'] },
+  { id: 3, title: 'The Legend of Zelda: TOTK', location: 'Sevilla', category: 'games', price: 42, rating: 4.8, reviews: 54, condition: 'Buen estado', seller: 'retroPlayer', shipping: 'Envío desde 3 €', image: 'https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=1000&q=85', description: 'Cartucho original de The Legend of Zelda: Tears of the Kingdom para Nintendo Switch. Probado y listo para jugar.', specs: ['Nintendo Switch', 'Cartucho original', 'Caja incluida'] },
+  { id: 4, title: 'Mando Xbox Wireless Carbon', location: 'Bilbao', category: 'controllers', price: 39, rating: 4.7, reviews: 21, condition: 'Como nuevo', seller: 'Iker M.', shipping: 'Envío gratis', image: 'https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=1000&q=85', description: 'Mando inalámbrico oficial de Xbox en color Carbon Black. Joysticks y botones en excelente estado.', specs: ['Bluetooth', 'Compatible con Xbox y PC', 'Incluye cable USB-C'] },
+  { id: 5, title: 'Steam Deck LCD 256 GB', location: 'Barcelona', category: 'consoles', price: 289, rating: 4.9, reviews: 27, condition: 'Muy buen estado', seller: 'Nico P.', shipping: 'Envío gratis', image: 'https://images.unsplash.com/photo-1592840496694-26d035b52b48?auto=format&fit=crop&w=1000&q=85', description: 'Steam Deck de 256 GB, restablecida de fábrica y con todos los controles revisados. Incluye funda de transporte.', specs: ['256 GB SSD', 'Pantalla LCD', 'Funda incluida'] },
+  { id: 6, title: 'Auriculares Pulse 3D', location: 'Zaragoza', category: 'accessories', price: 65, rating: 4.6, reviews: 12, condition: 'Buen estado', seller: 'Laura C.', shipping: 'Envío desde 4 €', image: 'https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1000&q=85', description: 'Auriculares inalámbricos Pulse 3D oficiales para PS5. Sonido envolvente y micrófono integrado.', specs: ['Audio 3D', 'Inalámbricos', 'Micrófono integrado'] },
+  { id: 7, title: 'Super Mario Odyssey', location: 'Málaga', category: 'games', price: 35, rating: 4.9, reviews: 41, condition: 'Como nuevo', seller: 'Javi L.', shipping: 'Envío desde 3 €', image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=1000&q=85', description: 'Super Mario Odyssey para Nintendo Switch. Cartucho original, probado y en perfecto estado.', specs: ['Nintendo Switch', 'Cartucho original', 'Caja incluida'] },
+  { id: 8, title: 'PC Gaming Ryzen 5 + RTX 3060', location: 'A Coruña', category: 'pc', price: 699, rating: 4.8, reviews: 9, condition: 'Muy buen estado', seller: 'bitsandbytes', shipping: 'Entrega en mano', image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1000&q=85', description: 'Torre gaming lista para jugar en 1080p. Componentes limpios y mantenidos; se puede probar en persona antes de comprar.', specs: ['Ryzen 5 5600X', 'GeForce RTX 3060', '16 GB RAM · SSD 1 TB'] },
 ]
